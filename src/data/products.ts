@@ -1,10 +1,25 @@
-export type Product = { sku:string; name:string; category:string; specs:string; description:string; image:string; stock:number; status:'active'|'inactive'; priceMode:'request_quote'|'fixed'; price?:number };
+export type Product = {
+  sku:string;
+  name:string;
+  brand:string;
+  supplier:string;
+  category:string;
+  series:string;
+  specs:string;
+  description:string;
+  image:string;
+  sourceUrl:string;
+  stock:number;
+  status:'active'|'inactive';
+  priceMode:'request_quote'|'fixed';
+  price?:number;
+};
 
 export const demoProducts: Product[] = [
-  { sku:'RLT-PV-460', name:'460W TOPCon All-Black Solar Panel', category:'Solar Panels', specs:'460W | N-Type TOPCon | Residential / Commercial', description:'Premium all-black solar panel for home and commercial projects.', image:'https://www.bluesunpv.com/wp-content/uploads/2024/11/460w-solar-panel.jpg', stock:0, status:'active', priceMode:'request_quote' },
-  { sku:'RLT-PV-730', name:'730W HJT Bifacial Double Glass Solar Panel', category:'Solar Panels', specs:'730W | HJT | Bifacial | Utility scale', description:'High-output HJT bifacial module for larger solar installations.', image:'https://www.bluesunpv.com/wp-content/uploads/2026/01/730w-hjt-solar-panel.webp', stock:0, status:'active', priceMode:'request_quote' },
-  { sku:'RLT-BAT-200', name:'51.2V 200Ah LiFePO4 Wall-Mounted Battery', category:'Lithium Battery', specs:'51.2V | 200Ah | Smart BMS | Home storage', description:'Wall-mounted lithium battery for backup power and solar energy storage.', image:'https://www.bluesunpv.com/wp-content/uploads/2024/11/51.2v-200ah-solar-lithium-battery.jpg', stock:0, status:'active', priceMode:'request_quote' },
-  { sku:'RLT-INV-6K', name:'6KW 48V Single Phase Hybrid Solar Inverter', category:'Solar Inverter', specs:'6KW | 48V | Hybrid | Residential', description:'Hybrid inverter for solar, battery and backup power applications.', image:'https://www.bluesunpv.com/wp-content/uploads/2024/10/inverter-catalog.png', stock:0, status:'active', priceMode:'request_quote' },
-  { sku:'RLT-SYS-4K', name:'4.2kW Solar Power System with 5.32kWh Battery', category:'Solar Power System', specs:'4.2kW | 5.32kWh | Home package', description:'Quote-first residential solar package for homes and small businesses.', image:'https://www.bluesunpv.com/wp-content/uploads/2024/10/hm-product-1.png', stock:0, status:'active', priceMode:'request_quote' },
-  { sku:'RLT-EV-DC', name:'Portable DC EV Charging Station with Energy Storage', category:'PV Accessories', specs:'EV charger | Energy storage | Portable', description:'Advanced EV charging solution for solar-powered charging projects.', image:'https://www.bluesunpv.com/wp-content/uploads/2024/10/ev-charge-catalog.png', stock:0, status:'active', priceMode:'request_quote' }
+  { sku:'RLT-PV-460', name:'460W TOPCon All-Black Solar Panel', brand:'Bluesun Solar', supplier:'Bluesun', category:'Solar Panels', series:'N-Type TOPCon Module', specs:'460W | N-Type TOPCon | All-black | Residential / Commercial', description:'Clean all-black solar module for residential and commercial installations. Listed by Realights as a quote-first product pending current inventory upload.', image:'https://www.bluesunpv.com/wp-content/uploads/2024/11/460w-solar-panel.jpg', sourceUrl:'https://www.bluesunpv.com/products/solar-panel/', stock:0, status:'active', priceMode:'request_quote' },
+  { sku:'RLT-PV-730', name:'730W HJT Bifacial Double Glass Solar Panel', brand:'Bluesun Solar', supplier:'Bluesun', category:'Solar Panels', series:'N-Type HJT Module', specs:'730W | HJT | Bifacial | Double glass | Utility scale', description:'High-output HJT bifacial module for larger solar projects and high-efficiency system designs.', image:'https://www.bluesunpv.com/wp-content/uploads/2026/01/730w-hjt-solar-panel.webp', sourceUrl:'https://www.bluesunpv.com/products/solar-panel/', stock:0, status:'active', priceMode:'request_quote' },
+  { sku:'RLT-BAT-200', name:'51.2V 200Ah LiFePO4 Wall-Mounted Battery', brand:'Bluesun Solar', supplier:'Bluesun', category:'Lithium Battery', series:'Residential BESS', specs:'51.2V | 200Ah | LiFePO4 | Smart BMS | Home storage', description:'Wall-mounted lithium battery for backup power, solar energy storage, and residential energy systems.', image:'https://www.bluesunpv.com/wp-content/uploads/2024/11/51.2v-200ah-solar-lithium-battery.jpg', sourceUrl:'https://www.bluesunpv.com/products/lithium-battery/', stock:0, status:'active', priceMode:'request_quote' },
+  { sku:'RLT-INV-6K', name:'6KW 48V Single Phase Hybrid Solar Inverter', brand:'Bluesun Solar', supplier:'Bluesun', category:'Solar Inverter', series:'Hybrid Inverter', specs:'6KW | 48V | Single phase | Hybrid | Residential', description:'Hybrid inverter for solar, battery, backup power, and quote-based residential energy packages.', image:'https://www.bluesunpv.com/wp-content/uploads/2024/10/inverter-catalog.png', sourceUrl:'https://www.bluesunpv.com/products/solar-inverter/', stock:0, status:'active', priceMode:'request_quote' },
+  { sku:'RLT-SYS-4K', name:'4.2kW Solar Power System with 5.32kWh Battery', brand:'Bluesun Solar', supplier:'Bluesun', category:'Solar Power System', series:'Residential Solar Energy System', specs:'4.2kW | 5.32kWh battery | Home package | Quote-first', description:'Residential solar package concept for homes and small businesses. Final design, stock, and pricing must be confirmed by Realights.', image:'https://www.bluesunpv.com/wp-content/uploads/2024/10/hm-product-1.png', sourceUrl:'https://www.bluesunpv.com/products/solar-power-system/', stock:0, status:'active', priceMode:'request_quote' },
+  { sku:'RLT-EV-DC', name:'Portable DC EV Charging Station with Energy Storage', brand:'Bluesun Solar', supplier:'Bluesun', category:'PV Accessories', series:'EV Charger', specs:'Portable DC charger | Energy storage | EV charging | Solar-ready', description:'Advanced EV charging product category for solar-powered charging station projects and commercial inquiries.', image:'https://www.bluesunpv.com/wp-content/uploads/2024/10/ev-charge-catalog.png', sourceUrl:'https://www.bluesunpv.com/products/pv-accessories/', stock:0, status:'active', priceMode:'request_quote' }
 ];
