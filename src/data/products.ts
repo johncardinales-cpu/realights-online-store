@@ -1,14 +1,14 @@
 export type Product = {
   sku:string;
   name:string;
-  brand:string;
-  supplier:string;
+  brand?:string;
+  supplier?:string;
   category:string;
-  series:string;
+  series?:string;
   specs:string;
   description:string;
   image:string;
-  sourceUrl:string;
+  sourceUrl?:string;
   stock:number;
   status:'active'|'inactive';
   priceMode:'request_quote'|'fixed';
